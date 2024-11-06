@@ -5,6 +5,10 @@ import json
 import plotly.express as px 
 import time
 from kafka import KafkaConsumer
+import six
+import sys
+if sys.version_info >= (3, 12, 0):
+    sys.modules['kafka.vendor.six.moves'] = six.moves
 
 from pandas.api.types import (
     is_categorical_dtype,

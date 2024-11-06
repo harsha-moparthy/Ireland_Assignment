@@ -1,11 +1,7 @@
 from flask import Flask, jsonify, request, Response
-from kafka import KafkaConsumer
 import pandas as pd
 import json
-import six
-import sys
-if sys.version_info >= (3, 12, 0):
-    sys.modules['kafka.vendor.six.moves'] = six.moves
+
 
 app = Flask(__name__)
 
